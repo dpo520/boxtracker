@@ -1,0 +1,8 @@
+{
+  "name": "Weather",
+  "color": "#F0A12E",
+  "regions": ["GLOBAL"],
+  "order": 2,
+  "status": "planned",
+  "blurb": "What the sky is doing now, and what is coming."
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Planes",
+  "color": "#2F7FE0",
+  "regions": ["GLOBAL"],
+  "order": 1,
+  "status": "planned",
+  "blurb": "See planes flying overhead and tap one to learn about it."
+}

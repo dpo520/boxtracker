@@ -1,0 +1,8 @@
+{
+  "name": "Plows",
+  "color": "#2C9A68",
+  "regions": ["CA-ON"],
+  "order": 3,
+  "status": "planned",
+  "blurb": "Find snowplows and salt trucks on Ontario highways."
+}

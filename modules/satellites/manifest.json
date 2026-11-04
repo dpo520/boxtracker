@@ -1,0 +1,8 @@
+{
+  "name": "Satellites",
+  "color": "#7A58D6",
+  "regions": ["GLOBAL"],
+  "order": 4,
+  "status": "planned",
+  "blurb": "Spot the space station and other satellites passing over."
+}

@@ -1,0 +1,52 @@
+/* Designed for the 800x480 handheld screen; scales up on a laptop. */
+:root {
+  --paper: #EDF1F4;
+  --ink: #16283C;
+  --ink-soft: #5B6B7C;
+  --tile-off: #C9D1D8;
+  --radius: 22px;
+  --font: "Nunito", "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--font);
+  display: flex; flex-direction: column; overflow: hidden;
+  -webkit-tap-highlight-color: transparent; user-select: none;
+}
+.bar { display: flex; align-items: center; gap: 12px; height: 64px; padding: 0 20px; flex: none; }
+.bar h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.01em; flex: 1; }
+.where { font-size: 15px; font-weight: 600; color: var(--ink-soft); }
+.back {
+  width: 48px; height: 48px; border: 0; border-radius: 50%; cursor: pointer;
+  background: var(--ink); color: #fff; display: grid; place-items: center;
+}
+main { flex: 1; min-height: 0; padding: 4px 20px 20px; }
+
+/* Launcher: three big tiles across, two down. */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 16px; height: 100%; }
+.tile {
+  --c: var(--tile-off);
+  border: 0; border-radius: var(--radius); background: var(--c); color: #fff;
+  font: inherit; cursor: pointer; padding: 18px;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+  text-align: left; transition: transform .12s ease;
+}
+.tile:active { transform: scale(.96); }
+.tile svg { width: 64px; height: 64px; }
+.tile .name { font-size: 28px; font-weight: 800; line-height: 1.05; }
+.tile .note { font-size: 14px; font-weight: 600; opacity: .85; margin-top: 4px; }
+.tile.off { color: #6E7A86; cursor: default; }
+.tile.off:active { transform: none; }
+.tile.settings { --c: var(--ink); }
+
+/* Module screens */
+.panel { height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 12px; max-width: 520px; }
+.panel h2 { font-size: 34px; font-weight: 800; }
+.panel p { font-size: 19px; line-height: 1.4; color: var(--ink-soft); }
+.panel .pill {
+  align-self: flex-start; padding: 6px 14px; border-radius: 99px;
+  background: var(--ink); color: #fff; font-weight: 700; font-size: 15px;
+}
+:focus-visible { outline: 4px solid #FFD23F; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .tile { transition: none; } }

@@ -1,0 +1,8 @@
+{
+  "name": "Launches",
+  "color": "#E5533D",
+  "regions": ["GLOBAL"],
+  "order": 5,
+  "status": "planned",
+  "blurb": "Countdowns to the next rocket launches."
+}
